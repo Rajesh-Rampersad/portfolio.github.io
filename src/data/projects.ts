@@ -156,34 +156,34 @@ export const projects: Project[] = [
     id: 'agroflow-saas',
     slug: 'agroflow-saas',
     title: {
-      es: 'AgroFlow MVP & Enterprise SaaS',
-      en: 'AgroFlow MVP & Enterprise SaaS',
-      pt: 'AgroFlow MVP & Enterprise SaaS'
+      es: 'AgroFlow Enterprise SaaS Boilerplate',
+      en: 'AgroFlow Enterprise SaaS Boilerplate',
+      pt: 'AgroFlow Enterprise SaaS Boilerplate'
     },
     subtitle: {
-      es: 'Arquitectura SaaS Multitenant de Alta Escalabilidad',
-      en: 'High-Scalability Multi-tenant SaaS Architecture',
-      pt: 'Arquitetura SaaS Multitenant de Alta Escalabilidade'
+      es: 'Arquitectura SaaS Multitenant y Motor ElasticSearch',
+      en: 'High-Scalability Multi-tenant SaaS & ElasticSearch',
+      pt: 'Arquitetura SaaS Multitenant e Motor ElasticSearch'
     },
     description: {
-      es: 'Boilerplate empresarial y plataforma SaaS agrícola con aislamiento estricto de base de datos por cliente (Multi-tenancy), motor de búsqueda distribuido y suite de pruebas intensiva.',
-      en: 'Enterprise boilerplate and agricultural SaaS platform with strict client database isolation (Multi-tenancy), distributed search engine, and intensive testing suite.',
-      pt: 'Boilerplate empresarial e plataforma SaaS agrícola com isolamento estrito de banco de dados por cliente (Multi-tenancy), mecanismo de busca distribuído e suite de testes intensiva.'
+      es: 'Boilerplate empresarial y plataforma SaaS agrícola con aislamiento físico de base de datos por inquilino (Database-per-Tenant), sincronización asíncrona a ElasticSearch y tests de Pest PHP.',
+      en: 'Enterprise agricultural SaaS platform with strict physical database-per-tenant isolation, asynchronous ElasticSearch synchronization, and 100% green Pest PHP tests.',
+      pt: 'Boilerplate empresarial e plataforma SaaS agrícola com isolamento físico de banco de dados por cliente (Database-per-Tenant), sincronização assíncrona com ElasticSearch e testes Pest PHP.'
     },
     longDescription: {
-      es: 'AgroFlow representa la cúspide del diseño de sistemas modernos para el sector agrícola. Diseñado bajo principios de Clean Architecture (separación estricta de capas de Dominio, Aplicación e Infraestructura), este SaaS multi-inquilino garantiza el aislamiento de datos a nivel de base de datos física (Database-per-Tenant) mediante middleware dinámico en Laravel 11. Además, integra un motor de búsqueda ultra rápido con ElasticSearch 8 sincronizado en tiempo real mediante Eloquent Observers, permitiendo búsquedas complejas con latencias menores a 150ms sobre millones de registros.',
-      en: 'AgroFlow represents the pinnacle of modern systems design for the agricultural sector. Engineered under Clean Architecture principles (strict separation of Domain, Application, and Infrastructure layers), this multi-tenant SaaS guarantees data isolation at the physical database level (Database-per-Tenant) using dynamic middleware in Laravel 11. Additionally, it integrates an ultra-fast search engine with ElasticSearch 8 synchronized in real-time through Eloquent Observers, enabling complex searches with latencies below 150ms over millions of records.',
-      pt: 'O AgroFlow representa o ápice do design de sistemas modernos para o setor agrícola. Projetado sob os princípios de Clean Architecture (separação estrita das camadas de Domínio, Aplicação e Infraestrutura), este SaaS multi-inquilino garante o isolamento dos dados no nível do banco de dados físico (Database-per-Tenant) usando middleware dinâmico no Laravel 11. Além disso, integra um mecanismo de busca ultra-rápido com ElasticSearch 8 sincronizado em tempo real através de Eloquent Observers, permitindo buscas complexas com latências inferiores a 150ms em milhões de registros.'
+      es: 'AgroFlow representa la cúspide del diseño de sistemas modernos para el sector agrícola empresarial. Diseñado bajo principios de Clean Architecture (separación estricta de capas de Dominio, Aplicación e Infraestructura), este SaaS multi-inquilino garantiza el aislamiento de datos a nivel de base de datos física (Database-per-Tenant) mediante un middleware dinámico en Laravel 11. Además, integra sincronización asíncrona de búsqueda con ElasticSearch 8 a través de colas de Redis y Horizon para latencias de consulta menores a 150ms, todo respaldado por una suite de pruebas robusta en Pest PHP con cobertura del 100% verde.',
+      en: 'AgroFlow represents the pinnacle of modern enterprise-level systems design for the agricultural sector. Engineered under Clean Architecture principles (strict separation of Domain, Application, and Infrastructure layers), this multi-tenant SaaS guarantees absolute physical data isolation (Database-per-Tenant) using dynamic middleware in Laravel 11. Additionally, it integrates asynchronous ElasticSearch 8 sync handled via background jobs (Redis/Horizon) to minimize request latency below 150ms, all validated by 100% green Pest PHP test suites.',
+      pt: 'O AgroFlow representa o ápice do design de sistemas modernos para o setor agrícola corporativo. Projetado sob os princípios de Clean Architecture (separação estrita de Domínio, Aplicação e Infraestrutura), este SaaS garante isolamento físico de banco de dados (Database-per-Tenant) usando middleware dinâmico no Laravel 11. Além disso, integra sincronização assíncrona com ElasticSearch 8 via filas Redis e Horizon para latências de consulta inferiores a 150ms, tudo validado por testes Pest PHP 100% verdes.'
     },
     category: 'saas',
-    tags: ['Next-Gen SaaS', 'Multi-Tenancy', 'Search Engines', 'Clean Architecture'],
-    technologies: ['Laravel 11', 'PostgreSQL', 'ElasticSearch 8', 'Pest v3', 'Docker', 'Redis'],
+    tags: ['Next-Gen SaaS', 'Database-per-Tenant', 'Search Engines', 'Clean Architecture', 'Redis / Horizon'],
+    technologies: ['Laravel 11', 'PostgreSQL', 'ElasticSearch 8', 'Pest PHP', 'Docker', 'Redis', 'Horizon'],
     metrics: [
       {
         label: {
-          es: 'Aislamiento de Datos',
-          en: 'Data Isolation',
-          pt: 'Isolamento de Dados'
+          es: 'Aislamiento Físico',
+          en: 'Database Isolation',
+          pt: 'Isolamento Físico'
         },
         value: '100% Secure'
       },
@@ -197,11 +197,11 @@ export const projects: Project[] = [
       },
       {
         label: {
-          es: 'Cobertura de Tests',
-          en: 'Test Coverage',
-          pt: 'Cobertura de Testes'
+          es: 'Tests Pest PHP',
+          en: 'Pest Test Suite',
+          pt: 'Testes Pest PHP'
         },
-        value: '94%'
+        value: '100% Green'
       },
       {
         label: {
@@ -253,9 +253,9 @@ export const projects: Project[] = [
         {
           id: 'redis',
           label: {
-            es: 'Redis (Cache & Rate Limiting)',
-            en: 'Redis (Cache & Rate Limiting)',
-            pt: 'Redis (Cache e Limite de Taxa)'
+            es: 'Redis & Horizon (Queue)',
+            en: 'Redis & Horizon (Queue)',
+            pt: 'Redis e Horizon (Fila)'
           },
           type: 'database'
         },
@@ -263,7 +263,7 @@ export const projects: Project[] = [
           id: 'elasticsearch',
           label: {
             es: 'ElasticSearch 8 (Sincronizado)',
-            en: 'ElasticSearch 8 (Sincronizado)',
+            en: 'ElasticSearch 8 (Synchronized)',
             pt: 'ElasticSearch 8 (Sincronizado)'
           },
           type: 'database'
@@ -283,36 +283,36 @@ export const projects: Project[] = [
           from: 'nginx',
           to: 'laravel',
           label: {
-            es: 'FastCGI',
-            en: 'FastCGI',
-            pt: 'FastCGI'
+            es: 'IdentifyTenant Middleware',
+            en: 'IdentifyTenant Middleware',
+            pt: 'IdentifyTenant Middleware'
           }
         },
         {
           from: 'laravel',
           to: 'redis',
           label: {
-            es: 'Caché de Consultas',
-            en: 'Query Cache',
-            pt: 'Cache de Consultas'
+            es: 'Job de Sincronización',
+            en: 'Sync Document Job',
+            pt: 'Job de Sincronização'
           }
         },
         {
           from: 'laravel',
           to: 'tenant_db',
           label: {
-            es: 'Conexión Dinámica',
-            en: 'Dynamic Connection',
-            pt: 'Conexão Dinâmica'
+            es: 'TenantConnectionService',
+            en: 'TenantConnectionService',
+            pt: 'TenantConnectionService'
           }
         },
         {
-          from: 'laravel',
+          from: 'redis',
           to: 'elasticsearch',
           label: {
-            es: 'Eloquent Observers Async',
-            en: 'Async Eloquent Observers',
-            pt: 'Eloquent Observers Async'
+            es: 'Horizon Async Sync',
+            en: 'Horizon Async Sync',
+            pt: 'Sincronização Assíncrona'
           }
         }
       ]
@@ -341,7 +341,7 @@ export const projects: Project[] = [
     longDescription: {
       es: 'API Market es una plataforma ERP integral diseñada bajo el patrón de microservicios y colas asíncronas para resolver problemas complejos de concurrencia y cumplimiento fiscal. Integra un sistema de Punto de Venta (POS) tolerante a condiciones de carrera en inventario concurrente mediante bloqueos atómicos en PostgreSQL (`select_for_update`). Para el cumplimiento de facturación electrónica brasileña (NFS-e), implementa una arquitectura desacoplada utilizando Celery y Redis que gestiona de manera asíncrona la firma digital, validación y transmisión de facturas, evitando la latencia en las cajas de cobro.',
       en: 'API Market is a comprehensive ERP platform designed under the microservices pattern and asynchronous queues to solve complex concurrency and tax compliance issues. It integrates a Point of Sale (POS) system tolerant to race conditions in concurrent inventory through atomic locks in PostgreSQL (`select_for_update`). For compliance with Brazilian electronic service invoicing (NFS-e), it implements a decoupled architecture using Celery and Redis that asynchronously manages digital signature, validation, and transmission of invoices, preventing latency at checkout cashiers.',
-      pt: 'O API Market é uma plataforma ERP abrangente projetada sob o padrão de microsserviços e filas assíncronas para resolver problemas complexos de concorrência e conformidade fiscal. Integra um sistema de Ponto de Venda (POS) tolerante a condições de corrida em estoque concorrente por meio de bloqueios atômicos no PostgreSQL (`select_for_update`). Para conformidade com o faturamento de serviços eletrônicos brasileiros (NFS-e), implementa uma arquitetura desacoplada usando Celery e Redis que gerencia de forma assíncrona a assinatura digital, validação e transmissão de faturas, evitando la latência nos caixas.'
+      pt: 'O API Market é uma plataforma ERP abrangente projetada sob o padrão de microsserviços e filas assíncronas para resolver problemas complexos de concorrência e conformidade fiscal. Integra um sistema de Ponto de Venda (POS) tolerante a condições de corrida em estoque concorrente por meio de bloqueios atômicos no PostgreSQL (`select_for_update`). Para conformidade com o faturamento de serviços eletrônicos brasileiros (NFS-e), implementa uma arquitetura desacoplada usando Celery e Redis que gerencia de forma assíncrona a assinatura digital, validação e transmissão de faturas, evitando a latência nos caixas.'
     },
     category: 'system',
     tags: ['SaaS ERP', 'Asynchronous Queues', 'Atomic Transactions', 'Compliance'],
@@ -633,7 +633,7 @@ export const projects: Project[] = [
     longDescription: {
       es: 'Un panel robusto diseñado para pequeños y medianos comercios. Permite la catalogación detallada de mercancías con alertas automáticas de bajo stock en tiempo real. La interfaz de punto de venta (POS) está optimizada para el uso rápido con atajos de teclado y escáneres de códigos de barras, conectándose de manera estable con la base de datos centralizada para evitar discrepancias de inventario.',
       en: 'A robust dashboard designed for small and medium retail businesses. It allows detailed classification of merchandise with automatic real-time low-stock alerts. The point of sale (POS) interface is optimized for speed using keyboard shortcuts and barcode scanners, establishing stable database connections to prevent stock discrepancies.',
-      pt: 'Painel robusto projetado para pequenos e médios comércios. Permite a catalogação detalhada de mercadorias com alertas automáticos de estoque baixo em tempo real. A interface de ponto de venda (POS) é otimizada para uso rápido com atalhos de teclado e scanners de código de barras, conectando-se de forma estável com o banco de dados centralizado.'
+      pt: 'Painel robusto projetado para pequenos e médios comércios. Permite a catalogação detalhada de mercadorias com alertas automáticos de estoque baixo em tempo real. A interface de ponto de venda (POS) é otimizada para uso rápido con atalhos de teclado e scanners de código de barras, conectando-se de forma estável com o banco de dados centralizado.'
     },
     category: 'system',
     tags: ['POS', 'Inventario', 'Control de Stock', 'Dashboard Administrativo'],
