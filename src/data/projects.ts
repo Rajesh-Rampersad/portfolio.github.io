@@ -2,148 +2,130 @@ import { Project } from '@/types';
 
 export const projects: Project[] = [
   {
-    id: 'mereyink-supermarket-api',
-    slug: 'mereyink-supermarket-api',
+    id: 'mereyink-cardapio-digital',
+    slug: 'mereyink-cardapio-digital',
     title: {
-      es: 'Mereyink Supermercado API & Stock',
-      en: 'Mereyink Supermarket API & Stock',
-      pt: 'Mereyink Supermercado API e Estoque'
+      es: 'Mereyink - Cardápio Digital & SaaS POS',
+      en: 'Mereyink - Digital Menu & SaaS POS',
+      pt: 'Mereyink - Cardápio Digital e SaaS POS'
     },
     subtitle: {
-      es: 'Motor de Inventario de Alta Velocidad & RBAC',
-      en: 'High-Speed Inventory Engine & RBAC Security',
-      pt: 'Motor de Estoque de Alta Velocidade e Segurança RBAC'
+      es: 'Plataforma SaaS de Ventas y Gestión para Restaurantes',
+      en: 'Multi-Tenant SaaS Sales & Order Management Platform',
+      pt: 'Plataforma SaaS de Vendas e Gestão para Restaurantes'
     },
     description: {
-      es: 'API de producción para gestión de supermercados, construida en FastAPI, SQLite y Pydantic v2. Implementa control atómico de stock y autenticación avanzada por roles (RBAC).',
-      en: 'Production API for supermarket stock management built on FastAPI, SQLite, and Pydantic v2, featuring atomic stock control and advanced role-based security (RBAC).',
-      pt: 'API de produção para gestão de supermercados construída em FastAPI, SQLite e Pydantic v2, com controle atômico de estoque e segurança avançada baseada em funções (RBAC).'
+      es: 'Plataforma premium de menú digital en producción para restaurantes, construida en Laravel, Filament y Next.js. Permite la toma de pedidos interactiva y administración fluida con PostgreSQL.',
+      en: 'Premium production-grade digital menu platform for restaurants, built with Laravel, Filament, and Next.js, featuring interactive order taking and PostgreSQL backend.',
+      pt: 'Plataforma premium de cardápio digital em produção para restaurantes, construída em Laravel, Filament e Next.js, com tomada de pedidos interativa e banco de dados PostgreSQL.'
     },
     longDescription: {
-      es: 'Mereyink es un motor de inventario moderno, hiperveloz y altamente seguro diseñado bajo principios REST y Clean Architecture. Protegido mediante un sistema robusto de tokens JWT y control de acceso basado en roles (RBAC) con dependencias inyectadas en FastAPI. Este backend automatiza flujos críticos como el registro de categorías y control de existencias de mercadería con validaciones automáticas mediante Pydantic v2. Además, cuenta con una suite de pruebas intensiva con Pytest que reporta una cobertura del 96%, asegurando la máxima fiabilidad en producción.',
-      en: 'Mereyink is a modern, ultra-fast, and highly secure inventory engine designed under REST principles and Clean Architecture. Secured with a robust JWT token system and role-based access control (RBAC) with dynamic dependency injection in FastAPI. This backend automates critical workflows like category registration and product stock adjustments with automatic validation models using Pydantic v2. Additionally, it features an intensive testing suite with Pytest reporting a 96% coverage, ensuring maximum reliability in production.',
-      pt: 'Mereyink é um motor de estoque moderno, hiper-veloz e altamente seguro projetado sob os princípios REST e Clean Architecture. Protegido por um sistema robusto de tokens JWT e controle de acesso baseado em funções (RBAC) com injeção de dependência dinâmica no FastAPI. Este backend automatiza fluxos críticos como o registro de categorias e o ajuste de estoque de produtos com validação automática via Pydantic v2. Além disso, conta com uma suite de testes intensiva com Pytest reportando 96% de cobertura, garantindo máxima confiabilidade em produção.'
+      es: 'Mereyink es un SaaS comercial en producción que resuelve la fricción de ventas en restaurantes de alto tráfico. Diseñado con una arquitectura desacoplada, utiliza un panel administrativo robusto en Laravel y Filament para la gestión interna de mesas, comandas, productos y caja. El frontend está desarrollado en Next.js, garantizando velocidades de carga instantáneas para el cliente final al escanear códigos QR. El sistema completo está respaldado por PostgreSQL y Docker, asegurando alta disponibilidad y concurrencia optimizada.',
+      en: 'Mereyink is a production-grade commercial SaaS solving sales friction in high-traffic restaurants. Engineered with a decoupled architecture, it uses a robust admin panel in Laravel and Filament for internal management of tables, orders, products, and cashier metrics. The client-facing frontend is built on Next.js, ensuring instant load speeds upon scanning QR codes. Supported entirely by PostgreSQL and Docker, guaranteeing high availability and optimized concurrent load handling.',
+      pt: 'O Mereyink é um SaaS comercial em produção que resolve a fricção de vendas em restaurantes de alto tráfego. Projetado com uma arquitetura desacoplada, utiliza um painel administrativo robusto em Laravel e Filament para gestão interna de mesas, comandas, produtos e caixa. O frontend voltado ao cliente é construído em Next.js, garantindo velocidades de carregamento instantâneas ao escanear códigos QR. Suportado inteiramente por PostgreSQL e Docker.'
     },
     category: 'saas',
-    tags: ['FastAPI Backend', 'Inventory Engine', 'RBAC Security', 'JWT Auth', 'Production Ready'],
-    technologies: ['FastAPI', 'Python 3', 'SQLAlchemy', 'Pydantic v2', 'SQLite', 'Pytest', 'JWT'],
+    tags: ['SaaS POS', 'Digital Menu', 'Production Product', 'Decoupled Architectures'],
+    technologies: ['Laravel', 'Filament Admin', 'PostgreSQL', 'Next.js', 'Tailwind CSS', 'Docker'],
     metrics: [
       {
         label: {
-          es: 'Latencia de Endpoint',
-          en: 'Endpoint Latency',
-          pt: 'Latência do Endpoint'
+          es: 'Carga de Página QR',
+          en: 'QR Page Load Time',
+          pt: 'Tempo de Carga QR'
         },
-        value: '<85ms'
+        value: '<1.2s'
       },
       {
         label: {
-          es: 'Seguridad Acceso',
-          en: 'Access Security',
-          pt: 'Segurança de Acesso'
+          es: 'Administración Backend',
+          en: 'Backend Panel',
+          pt: 'Painel Admin Backend'
         },
-        value: 'JWT & RBAC'
+        value: 'Filament L11'
       },
       {
         label: {
-          es: 'Cobertura de Código',
-          en: 'Code Coverage',
-          pt: 'Cobertura de Código'
+          es: 'Base de Datos',
+          en: 'Database Engine',
+          pt: 'Motor de Banco'
         },
-        value: '96%'
+        value: 'PostgreSQL'
       },
       {
         label: {
-          es: 'Arquitectura Limpia',
-          en: 'Clean Architecture',
-          pt: 'Arquitetura Limpa'
+          es: 'Disponibilidad',
+          en: 'Core Availability',
+          pt: 'Disponibilidade'
         },
-        value: 'Strict Core'
+        value: '99.9%'
       }
     ],
     architecture: {
       nodes: [
         {
-          id: 'client',
+          id: 'qr_client',
           label: {
-            es: 'Cliente Frontend / Mobile',
-            en: 'Frontend / Mobile Client',
-            pt: 'Cliente Frontend / Mobile'
+            es: 'Cliente en Mesa (Next.js QR)',
+            en: 'Table Client (Next.js QR)',
+            pt: 'Cliente na Mesa (Next.js QR)'
           },
           type: 'client'
         },
         {
-          id: 'fastapi',
+          id: 'filament_admin',
           label: {
-            es: 'FastAPI Router Engine',
-            en: 'FastAPI Router Engine',
-            pt: 'Motor FastAPI Router'
+            es: 'Administrador (Filament Panel)',
+            en: 'Admin Panel (Filament)',
+            pt: 'Painel Admin (Filament)'
           },
           type: 'server'
         },
         {
-          id: 'auth',
+          id: 'laravel_core',
           label: {
-            es: 'JWT Auth Layer (Passlib)',
-            en: 'JWT Auth Layer (Passlib)',
-            pt: 'Camada de Autenticação JWT'
-          },
-          type: 'external'
-        },
-        {
-          id: 'pydantic',
-          label: {
-            es: 'Validador Pydantic v2',
-            en: 'Pydantic v2 Validator',
-            pt: 'Validador Pydantic v2'
+            es: 'Laravel core (SaaS Engine)',
+            en: 'Laravel Core (SaaS Engine)',
+            pt: 'Laravel Core (SaaS Engine)'
           },
           type: 'server'
         },
         {
-          id: 'sqlite',
+          id: 'postgre_db',
           label: {
-            es: 'Base de Datos SQLite',
-            en: 'SQLite Database',
-            pt: 'Banco de Dados SQLite'
+            es: 'PostgreSQL (SaaS Data)',
+            en: 'PostgreSQL (SaaS Data)',
+            pt: 'PostgreSQL (SaaS Data)'
           },
           type: 'database'
         }
       ],
       edges: [
         {
-          from: 'client',
-          to: 'fastapi',
+          from: 'qr_client',
+          to: 'laravel_core',
           label: {
-            es: 'HTTPS / JSON',
-            en: 'HTTPS / JSON',
-            pt: 'HTTPS / JSON'
+            es: 'Realizar Pedido JSON',
+            en: 'Submit Order JSON',
+            pt: 'Realizar Pedido JSON'
           }
         },
         {
-          from: 'fastapi',
-          to: 'auth',
+          from: 'laravel_core',
+          to: 'postgre_db',
           label: {
-            es: 'Verificación JWT',
-            en: 'JWT Verification',
-            pt: 'Verificação JWT'
+            es: 'Persistencia ACID',
+            en: 'ACID Persistence',
+            pt: 'Persistência ACID'
           }
         },
         {
-          from: 'auth',
-          to: 'pydantic',
+          from: 'laravel_core',
+          to: 'filament_admin',
           label: {
-            es: 'Validar Esquema',
-            en: 'Validate Schema',
-            pt: 'Validar Esquema'
-          }
-        },
-        {
-          from: 'pydantic',
-          to: 'sqlite',
-          label: {
-            es: 'Transacción ACID',
-            en: 'ACID Transaction',
-            pt: 'Transação ACID'
+            es: 'Notificación de Mesa',
+            en: 'Table Notification',
+            pt: 'Notificação de Mesa'
           }
         }
       ]
@@ -153,12 +135,12 @@ export const projects: Project[] = [
     image: 'supermarket'
   },
   {
-    id: 'agroflow-saas',
-    slug: 'agroflow-saas',
+    id: 'laravel-enterprise-starter',
+    slug: 'laravel-enterprise-starter',
     title: {
-      es: 'AgroFlow Enterprise SaaS Boilerplate',
-      en: 'AgroFlow Enterprise SaaS Boilerplate',
-      pt: 'AgroFlow Enterprise SaaS Boilerplate'
+      es: 'Laravel Enterprise SaaS Boilerplate',
+      en: 'Laravel Enterprise SaaS Boilerplate',
+      pt: 'Laravel Enterprise SaaS Boilerplate'
     },
     subtitle: {
       es: 'Arquitectura SaaS Multitenant y Motor ElasticSearch',
@@ -317,8 +299,160 @@ export const projects: Project[] = [
         }
       ]
     },
+    githubUrl: 'https://github.com/Rajesh-Rampersad/laravel-enterprise-starter',
     featured: true,
     image: 'agroflow'
+  },
+  {
+    id: 'supermercado_api_fastApi',
+    slug: 'supermercado_api_fastApi',
+    title: {
+      es: 'Supermercado API & Stock Engine',
+      en: 'Supermarket API & Stock Engine',
+      pt: 'Supermercado API e Motor de Estoque'
+    },
+    subtitle: {
+      es: 'Motor de Inventario de Alta Velocidad & RBAC',
+      en: 'High-Speed Inventory Engine & RBAC Security',
+      pt: 'Motor de Estoque de Alta Velocidade e Segurança RBAC'
+    },
+    description: {
+      es: 'API de producción para gestión de supermercados, construida en FastAPI, SQLite y Pydantic v2. Implementa control atómico de stock y autenticación avanzada por roles (RBAC).',
+      en: 'Production API for supermarket stock management built on FastAPI, SQLite, and Pydantic v2, featuring atomic stock control and advanced role-based security (RBAC).',
+      pt: 'API de produção para gestão de supermercados construída em FastAPI, SQLite e Pydantic v2, com controle atômico de estoque e segurança avançada baseada em funções (RBAC).'
+    },
+    longDescription: {
+      es: 'Esta API representa un motor de inventario moderno, hiperveloz y altamente seguro diseñado bajo principios REST y Clean Architecture. Protegido mediante un sistema robusto de tokens JWT y control de acceso basado en roles (RBAC) con dependencias inyectadas en FastAPI. Este backend automatiza flujos críticos como el registro de categorías y control de existencias de mercadería con validaciones automáticas mediante Pydantic v2. Además, cuenta con una suite de pruebas intensiva con Pytest que reporta una cobertura del 96%, asegurando la máxima fiabilidad en producción.',
+      en: 'This API is a modern, ultra-fast, and highly secure inventory engine designed under REST principles and Clean Architecture. Secured with a robust JWT token system and role-based access control (RBAC) with dynamic dependency injection in FastAPI. This backend automates critical workflows like category registration and product stock adjustments with automatic validation models using Pydantic v2. Additionally, it features an intensive testing suite with Pytest reporting a 96% coverage, ensuring maximum reliability in production.',
+      pt: 'Esta API é um motor de estoque moderno, hiper-veloz e altamente seguro projetado sob os princípios REST e Clean Architecture. Protegido por um sistema robusto de tokens JWT e controle de acesso baseado em funções (RBAC) com injeção de dependência dinâmica no FastAPI. Este backend automatiza fluxos críticos como o registro de categorias e o ajuste de estoque de produtos com validação automática via Pydantic v2. Além disso, conta com uma suite de testes intensiva com Pytest reportando 96% de cobertura, garantindo máxima confiabilidade em produção.'
+    },
+    category: 'system',
+    tags: ['FastAPI Backend', 'Inventory Engine', 'RBAC Security', 'JWT Auth', 'Production Ready'],
+    technologies: ['FastAPI', 'Python 3', 'SQLAlchemy', 'Pydantic v2', 'SQLite', 'Pytest', 'JWT'],
+    metrics: [
+      {
+        label: {
+          es: 'Latencia de Endpoint',
+          en: 'Endpoint Latency',
+          pt: 'Latência do Endpoint'
+        },
+        value: '<85ms'
+      },
+      {
+        label: {
+          es: 'Seguridad Acceso',
+          en: 'Access Security',
+          pt: 'Segurança de Acesso'
+        },
+        value: 'JWT & RBAC'
+      },
+      {
+        label: {
+          es: 'Cobertura de Código',
+          en: 'Code Coverage',
+          pt: 'Cobertura de Código'
+        },
+        value: '96%'
+      },
+      {
+        label: {
+          es: 'Arquitectura Limpia',
+          en: 'Clean Architecture',
+          pt: 'Arquitetura Limpa'
+        },
+        value: 'Strict Core'
+      }
+    ],
+    architecture: {
+      nodes: [
+        {
+          id: 'client',
+          label: {
+            es: 'Cliente Frontend / Mobile',
+            en: 'Frontend / Mobile Client',
+            pt: 'Cliente Frontend / Mobile'
+          },
+          type: 'client'
+        },
+        {
+          id: 'fastapi',
+          label: {
+            es: 'FastAPI Router Engine',
+            en: 'FastAPI Router Engine',
+            pt: 'Motor FastAPI Router'
+          },
+          type: 'server'
+        },
+        {
+          id: 'auth',
+          label: {
+            es: 'JWT Auth Layer (Passlib)',
+            en: 'JWT Auth Layer (Passlib)',
+            pt: 'Camada de Autenticação JWT'
+          },
+          type: 'external'
+        },
+        {
+          id: 'pydantic',
+          label: {
+            es: 'Validador Pydantic v2',
+            en: 'Pydantic v2 Validator',
+            pt: 'Validador Pydantic v2'
+          },
+          type: 'server'
+        },
+        {
+          id: 'sqlite',
+          label: {
+            es: 'Base de Datos SQLite',
+            en: 'SQLite Database',
+            pt: 'Banco de Dados SQLite'
+          },
+          type: 'database'
+        }
+      ],
+      edges: [
+        {
+          from: 'client',
+          to: 'fastapi',
+          label: {
+            es: 'HTTPS / JSON',
+            en: 'HTTPS / JSON',
+            pt: 'HTTPS / JSON'
+          }
+        },
+        {
+          from: 'fastapi',
+          to: 'auth',
+          label: {
+            es: 'Verificación JWT',
+            en: 'JWT Verification',
+            pt: 'Verificação JWT'
+          }
+        },
+        {
+          from: 'auth',
+          to: 'pydantic',
+          label: {
+            es: 'Validar Esquema',
+            en: 'Validate Schema',
+            pt: 'Validar Esquema'
+          }
+        },
+        {
+          from: 'pydantic',
+          to: 'sqlite',
+          label: {
+            es: 'Transacción ACID',
+            en: 'ACID Transaction',
+            pt: 'Transação ACID'
+          }
+        }
+      ]
+    },
+    githubUrl: 'https://github.com/Rajesh-Rampersad/supermercado_api_fastApi',
+    featured: true,
+    image: 'supermarket'
   },
   {
     id: 'api-market-erp',
@@ -574,7 +708,7 @@ export const projects: Project[] = [
           label: {
             es: 'Base de Datos MySQL',
             en: 'MySQL Database',
-            pt: 'Banco de Dados MySQL'
+            pt: 'Banco de Datos MySQL'
           },
           type: 'database'
         }
