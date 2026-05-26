@@ -2,6 +2,157 @@ import { Project } from '@/types';
 
 export const projects: Project[] = [
   {
+    id: 'mereyink-supermarket-api',
+    slug: 'mereyink-supermarket-api',
+    title: {
+      es: 'Mereyink Supermercado API & Stock',
+      en: 'Mereyink Supermarket API & Stock',
+      pt: 'Mereyink Supermercado API e Estoque'
+    },
+    subtitle: {
+      es: 'Motor de Inventario de Alta Velocidad & RBAC',
+      en: 'High-Speed Inventory Engine & RBAC Security',
+      pt: 'Motor de Estoque de Alta Velocidade e Segurança RBAC'
+    },
+    description: {
+      es: 'API de producción para gestión de supermercados, construida en FastAPI, SQLite y Pydantic v2. Implementa control atómico de stock y autenticación avanzada por roles (RBAC).',
+      en: 'Production API for supermarket stock management built on FastAPI, SQLite, and Pydantic v2, featuring atomic stock control and advanced role-based security (RBAC).',
+      pt: 'API de produção para gestão de supermercados construída em FastAPI, SQLite e Pydantic v2, com controle atômico de estoque e segurança avançada baseada em funções (RBAC).'
+    },
+    longDescription: {
+      es: 'Mereyink es un motor de inventario moderno, hiperveloz y altamente seguro diseñado bajo principios REST y Clean Architecture. Protegido mediante un sistema robusto de tokens JWT y control de acceso basado en roles (RBAC) con dependencias inyectadas en FastAPI. Este backend automatiza flujos críticos como el registro de categorías y control de existencias de mercadería con validaciones automáticas mediante Pydantic v2. Además, cuenta con una suite de pruebas intensiva con Pytest que reporta una cobertura del 96%, asegurando la máxima fiabilidad en producción.',
+      en: 'Mereyink is a modern, ultra-fast, and highly secure inventory engine designed under REST principles and Clean Architecture. Secured with a robust JWT token system and role-based access control (RBAC) with dynamic dependency injection in FastAPI. This backend automates critical workflows like category registration and product stock adjustments with automatic validation models using Pydantic v2. Additionally, it features an intensive testing suite with Pytest reporting a 96% coverage, ensuring maximum reliability in production.',
+      pt: 'Mereyink é um motor de estoque moderno, hiper-veloz e altamente seguro projetado sob os princípios REST e Clean Architecture. Protegido por um sistema robusto de tokens JWT e controle de acesso baseado em funções (RBAC) com injeção de dependência dinâmica no FastAPI. Este backend automatiza fluxos críticos como o registro de categorias e o ajuste de estoque de produtos com validação automática via Pydantic v2. Além disso, conta com uma suite de testes intensiva com Pytest reportando 96% de cobertura, garantindo máxima confiabilidade em produção.'
+    },
+    category: 'saas',
+    tags: ['FastAPI Backend', 'Inventory Engine', 'RBAC Security', 'JWT Auth', 'Production Ready'],
+    technologies: ['FastAPI', 'Python 3', 'SQLAlchemy', 'Pydantic v2', 'SQLite', 'Pytest', 'JWT'],
+    metrics: [
+      {
+        label: {
+          es: 'Latencia de Endpoint',
+          en: 'Endpoint Latency',
+          pt: 'Latência do Endpoint'
+        },
+        value: '<85ms'
+      },
+      {
+        label: {
+          es: 'Seguridad Acceso',
+          en: 'Access Security',
+          pt: 'Segurança de Acesso'
+        },
+        value: 'JWT & RBAC'
+      },
+      {
+        label: {
+          es: 'Cobertura de Código',
+          en: 'Code Coverage',
+          pt: 'Cobertura de Código'
+        },
+        value: '96%'
+      },
+      {
+        label: {
+          es: 'Arquitectura Limpia',
+          en: 'Clean Architecture',
+          pt: 'Arquitetura Limpa'
+        },
+        value: 'Strict Core'
+      }
+    ],
+    architecture: {
+      nodes: [
+        {
+          id: 'client',
+          label: {
+            es: 'Cliente Frontend / Mobile',
+            en: 'Frontend / Mobile Client',
+            pt: 'Cliente Frontend / Mobile'
+          },
+          type: 'client'
+        },
+        {
+          id: 'fastapi',
+          label: {
+            es: 'FastAPI Router Engine',
+            en: 'FastAPI Router Engine',
+            pt: 'Motor FastAPI Router'
+          },
+          type: 'server'
+        },
+        {
+          id: 'auth',
+          label: {
+            es: 'JWT Auth Layer (Passlib)',
+            en: 'JWT Auth Layer (Passlib)',
+            pt: 'Camada de Autenticação JWT'
+          },
+          type: 'external'
+        },
+        {
+          id: 'pydantic',
+          label: {
+            es: 'Validador Pydantic v2',
+            en: 'Pydantic v2 Validator',
+            pt: 'Validador Pydantic v2'
+          },
+          type: 'server'
+        },
+        {
+          id: 'sqlite',
+          label: {
+            es: 'Base de Datos SQLite',
+            en: 'SQLite Database',
+            pt: 'Banco de Dados SQLite'
+          },
+          type: 'database'
+        }
+      ],
+      edges: [
+        {
+          from: 'client',
+          to: 'fastapi',
+          label: {
+            es: 'HTTPS / JSON',
+            en: 'HTTPS / JSON',
+            pt: 'HTTPS / JSON'
+          }
+        },
+        {
+          from: 'fastapi',
+          to: 'auth',
+          label: {
+            es: 'Verificación JWT',
+            en: 'JWT Verification',
+            pt: 'Verificação JWT'
+          }
+        },
+        {
+          from: 'auth',
+          to: 'pydantic',
+          label: {
+            es: 'Validar Esquema',
+            en: 'Validate Schema',
+            pt: 'Validar Esquema'
+          }
+        },
+        {
+          from: 'pydantic',
+          to: 'sqlite',
+          label: {
+            es: 'Transacción ACID',
+            en: 'ACID Transaction',
+            pt: 'Transação ACID'
+          }
+        }
+      ]
+    },
+    liveUrl: 'https://mereyink.com',
+    featured: true,
+    image: 'supermarket'
+  },
+  {
     id: 'agroflow-saas',
     slug: 'agroflow-saas',
     title: {
@@ -112,7 +263,7 @@ export const projects: Project[] = [
           id: 'elasticsearch',
           label: {
             es: 'ElasticSearch 8 (Sincronizado)',
-            en: 'ElasticSearch 8 (Synchronized)',
+            en: 'ElasticSearch 8 (Sincronizado)',
             pt: 'ElasticSearch 8 (Sincronizado)'
           },
           type: 'database'
@@ -190,7 +341,7 @@ export const projects: Project[] = [
     longDescription: {
       es: 'API Market es una plataforma ERP integral diseñada bajo el patrón de microservicios y colas asíncronas para resolver problemas complejos de concurrencia y cumplimiento fiscal. Integra un sistema de Punto de Venta (POS) tolerante a condiciones de carrera en inventario concurrente mediante bloqueos atómicos en PostgreSQL (`select_for_update`). Para el cumplimiento de facturación electrónica brasileña (NFS-e), implementa una arquitectura desacoplada utilizando Celery y Redis que gestiona de manera asíncrona la firma digital, validación y transmisión de facturas, evitando la latencia en las cajas de cobro.',
       en: 'API Market is a comprehensive ERP platform designed under the microservices pattern and asynchronous queues to solve complex concurrency and tax compliance issues. It integrates a Point of Sale (POS) system tolerant to race conditions in concurrent inventory through atomic locks in PostgreSQL (`select_for_update`). For compliance with Brazilian electronic service invoicing (NFS-e), it implements a decoupled architecture using Celery and Redis that asynchronously manages digital signature, validation, and transmission of invoices, preventing latency at checkout cashiers.',
-      pt: 'O API Market é uma plataforma ERP abrangente projetada sob o padrão de microsserviços e filas assíncronas para resolver problemas complexos de concorrência e conformidade fiscal. Integra um sistema de Ponto de Venda (POS) tolerante a condições de corrida em estoque concorrente por meio de bloqueios atômicos no PostgreSQL (`select_for_update`). Para conformidade com o faturamento de serviços eletrônicos brasileiros (NFS-e), implementa uma arquitetura desacoplada usando Celery e Redis que gerencia de forma assíncrona a assinatura digital, validação e transmissão de faturas, evitando a latência nos caixas.'
+      pt: 'O API Market é uma plataforma ERP abrangente projetada sob o padrão de microsserviços e filas assíncronas para resolver problemas complexos de concorrência e conformidade fiscal. Integra um sistema de Ponto de Venda (POS) tolerante a condições de corrida em estoque concorrente por meio de bloqueios atômicos no PostgreSQL (`select_for_update`). Para conformidade com o faturamento de serviços eletrônicos brasileiros (NFS-e), implementa uma arquitetura desacoplada usando Celery e Redis que gerencia de forma assíncrona a assinatura digital, validação e transmissão de faturas, evitando la latência nos caixas.'
     },
     category: 'system',
     tags: ['SaaS ERP', 'Asynchronous Queues', 'Atomic Transactions', 'Compliance'],
