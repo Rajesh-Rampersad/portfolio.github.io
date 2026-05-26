@@ -2,6 +2,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { ArrowLeft, CheckCircle, MessageSquare, Download } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -96,14 +97,14 @@ export default function ThanksPage() {
 
           {/* Back link */}
           <div className="pt-4">
-            <a
+            <Link
               href="/"
               className="inline-flex items-center space-x-2 text-[10px] font-mono text-gray-500 hover:text-white transition-colors"
               data-analytics-event="thanks_go_home"
             >
               <ArrowLeft className="h-3.5 w-3.5" />
               <span>{t('thanksHome')}</span>
-            </a>
+            </Link>
           </div>
 
         </div>

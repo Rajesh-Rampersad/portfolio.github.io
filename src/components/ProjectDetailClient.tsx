@@ -2,6 +2,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { ArrowLeft, Activity, Award } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -23,14 +24,14 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           {/* Back Button */}
-          <a
+          <Link
             href="/"
             className="inline-flex items-center space-x-2 text-xs font-mono text-gray-400 hover:text-brand-cyan transition-colors mb-8 group"
             data-analytics-event="project_detail_back"
           >
             <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
             <span>{t('projBack')}</span>
-          </a>
+          </Link>
 
           {/* Heading Area */}
           <div className="border-b border-brand-dark-border pb-8 mb-8">
@@ -121,13 +122,13 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
               {/* Action Sidebar */}
               <div className="glass-panel p-6 rounded-2xl border border-brand-dark-border text-center space-y-4">
                 <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest block">{t('projSimilar')}</span>
-                <a
+                <Link
                   href="/#contacto"
                   className="w-full inline-flex items-center justify-center px-4 py-3 text-xs font-mono font-bold tracking-widest text-brand-dark-base bg-brand-cyan rounded-lg hover:bg-white shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all active:scale-95"
                   data-analytics-event={`project_detail_cta_${project.id}`}
                 >
                   {t('projConsult')}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -139,3 +140,4 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
     </>
   );
 }
+

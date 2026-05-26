@@ -2,6 +2,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { Project } from '@/types';
 import { ExternalLink, Database, Cpu, Server, MessageSquare } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
@@ -96,22 +97,23 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
       {/* Footer link click with analytics tracking */}
       <div className="bg-brand-dark-base/40 border-t border-brand-dark-border px-5 py-4 flex items-center justify-between">
-        <a 
+        <Link 
           href={`/projects/${project.slug}`}
           className="text-xs font-mono font-bold tracking-wider text-brand-cyan hover:text-white transition-colors duration-200"
           data-analytics-event={`view_project_details_${project.id}`}
         >
           {t('auditDetails')}
-        </a>
-        <a 
+        </Link>
+        <Link 
           href={`/projects/${project.slug}`}
           className="p-1.5 rounded-lg border border-brand-dark-border bg-brand-dark-base text-gray-400 hover:text-white hover:border-brand-cyan transition-colors"
           data-analytics-event={`view_project_icon_${project.id}`}
           aria-label={`Auditar`}
         >
           <ExternalLink className="h-3.5 w-3.5" />
-        </a>
+        </Link>
       </div>
     </div>
   );
 }
+
